@@ -48,14 +48,14 @@
     }
 
     input {
-    padding: 0.75rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    outline: none;
-    transition: border 0.3s;
-    width: 100%;
-    box-sizing: border-box;
+      padding: 0.75rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.3s;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     input:focus {
@@ -79,7 +79,7 @@
   </style>
 </head>
 <body>
-  <form id="form-ruan-test" action="#" method="POST">
+  <form id="form-ruan-test">
     <h2>Contato</h2>
 
     <div>
@@ -94,6 +94,21 @@
 
     <button type="submit">Enviar</button>
   </form>
-  <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/08facc2d-166c-4f5e-b8ea-3d88097dcaa0-loader.js" ></script>
+
+  <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/ef813e17-9cf9-4c14-8809-0c9fe8af936f-loader.js"></script>
+
+  <script>
+    document.getElementById('form-ruan-test').addEventListener('submit', function(event) {
+      // Previne o comportamento padrão do navegador que causaria o Erro 405
+      event.preventDefault(); 
+      
+      // Feedback visual simples para o usuário. 
+      // O script do RD Station irá capturar os dados nos bastidores.
+      alert('Obrigado! Seu contato foi enviado com sucesso.');
+      
+      // Limpa os campos do formulário após o envio
+      this.reset();
+    });
+  </script>
 </body>
 </html>
