@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulário de Contato | Moderno</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      /* Novo fundo com gradiente */
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: #ffffff;
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 90%; /* Ajuste para responsividade em telas menores */
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    form > div {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    h2 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.75rem;
+      color: #2d3748;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    p.subtitle {
+      text-align: center;
+      color: #718096;
+      font-size: 0.9rem;
+      margin: 0 0 1rem 0;
+    }
+
+    label {
+      font-size: 0.85rem;
+      color: #4a5568;
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+    }
+
+    input {
+      padding: 0.85rem 1rem;
+      border: 2px solid #e2e8f0;
+      background-color: #f7fafc;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-family: 'Poppins', sans-serif;
+      outline: none;
+      transition: all 0.3s ease;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    input:focus {
+      border-color: #667eea;
+      background-color: #ffffff;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+    }
+
+    button {
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: white;
+      border: none;
+      padding: 1rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-top: 0.5rem;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(118, 75, 162, 0.3);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <form id="form-ruan-test">
+      <h2>Fale Conosco</h2>
+      <p class="subtitle">Deixe seus dados e entraremos em contato.</p>
+
+      <div>
+        <label for="email">Endereço de E-mail</label>
+        <input type="email" id="email" name="email" placeholder="exemplo@email.com" required />
+      </div>
+
+      <div>
+        <label for="phone">Número de Telefone</label>
+        <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required />
+      </div>
+
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </div>
+
+  <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/ef813e17-9cf9-4c14-8809-0c9fe8af936f-loader.js"></script>
+
+  <script>
+    document.getElementById('form-ruan-test').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      alert('Obrigado! Seu contato foi enviado com sucesso.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
